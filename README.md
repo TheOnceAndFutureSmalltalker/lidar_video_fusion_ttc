@@ -1,9 +1,9 @@
 # Time to Collision Estimation Using Video and LiDAR
 
-Fusion of Video images and LiDAR readings to determine the time to collision of a vehicle in front of our vehicle.
+Fusion of Video images and LiDAR readings to determine the time to collision of a vehicle in front of our vehicle.  Several different concepts in computer vision and sensor fusion are illustrated in this project.  For more on this, see the Discussion section below.
 
 <p align="center">
-<img src="https://github.com/TheOnceAndFutureSmalltalker/lidar_video_fusion_ttc/blob/master/images/draggedimage-1.png"  /><br /><b>Detected Image Keypoints</b></p>
+<img src="https://github.com/TheOnceAndFutureSmalltalker/lidar_video_fusion_ttc/blob/master/images/draggedimage-1.png"  /><br /><b>Image Keypoints Detected in a Frame Taken from Ego Car</b></p>
 <br />
 
 ## Dependencies
@@ -19,6 +19,7 @@ To acquire, compile, and run the project in Ubuntu, follow the statements below.
 ```bash
 $> git clone https://github.com/TheOnceAndFutureSmalltalker/lidar_video_fusion_ttc.git
 $> cd lidar_video_fusion_ttc
+$> wget https://pjreddie.com/media/files/yolov3.weights /data/yolo
 $> mkdir build && cd build
 $> cmake ..
 $> make
