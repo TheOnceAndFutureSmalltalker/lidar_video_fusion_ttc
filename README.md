@@ -46,14 +46,16 @@ Time to collision, or TTC, is the estimated time until our ego vehicle collides 
 
 ### Image Keypoint Detection
 
-A keypoint is an identifyiable feature of an image and is used for object detection.  There are several methods available for doining this available in OpenCV.  This project explores and compares the following methods:  
+A keypoint is an identifyiable feature of an image and is used for object detection.  There are several methods available for doining this available in OpenCV.  This project explores and compares the following methods:  SHITOMASI, HARRIS, FAST, BRISK, ORB, AKAZE, and SIFT.
 
 ### Image Keypoint Descriptors
 
-A keypoint descriptor uses intensity and other image information to uniquely identify keypoints.  This allows use to match keypoints from frame to the next.   
+A keypoint descriptor uses intensity and other image information to uniquely identify keypoints.  This allows us to match keypoints from one frame to the next.   This project uses several keypoint descriptor methods:  BRISK, BRIEF, ORB, FREAK, AKAZE, and SIFT.
 
 ### YOLO Object Detector
 
 In order to fuse LiDAR with image information, objects need to be identified within the image.  This project uses a YOLO object detector inference model for this purpose.  This model was trained on the COCO dataset which includes 80 classes.  Among these are several classes of interest to a self-driving car such as person, car, truck, bicycle, motorbike, and bus.  In this project we are only interested in the car class.  Visit the official [YOLO site](https://pjreddie.com/darknet/yolo/) for more information.
 
 ### LiDAR Video Fusion
+
+In order to identify an object (car in this case) in the LiDAR point cloud, the point cloud must be matched up with the bounding box found in the YOLO object detector.  This tells us which LiDAR points represent the object or vehicle, and from there we can calculate a distance to the car.
