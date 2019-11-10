@@ -42,17 +42,18 @@ The pinhole camera is the model for cameras that defines the relationship betwee
 
 ### Collision Detection
 
-Time to collision, or TTC, is the estimated time until our ego vehicle collides with the vehicle we are tracking, usually the car directly in front of our car.
+Time to collision, or TTC, is the estimated time until our ego vehicle collides with the vehicle we are tracking, usually the car directly in front of our car.  This is done by deterining the distance to the other vehicle for each frame and then using time between frames to calculate velocity.  From there we can calculate time to collision.
 
+### Image Keypoint Detection
 
-image keypoints
+A keypoint is an identifyiable feature of an image and is used for object detection.  There are several methods available for doining this available in OpenCV.  This project explores and compares the following methods:  
 
-matching
+### Image Keypoint Descriptors
 
-neural networks
+A keypoint descriptor uses intensity and other image information to uniquely identify keypoints.  This allows use to match keypoints from frame to the next.   
 
+### YOLO Object Detector
 
+In order to fuse LiDAR with image information, objects need to be identified within the image.  This project uses a YOLO object detector inference model for this purpose.  This model was trained on the COCO dataset which includes 80 classes.  Among these are several classes of interest to a self-driving car such as person, car, truck, bicycle, motorbike, and bus.  In this project we are only interested in the car class.  Visit the official [YOLO site](https://pjreddie.com/darknet/yolo/) for more information.
 
-time to collision calculation
-
-lidar video fusion
+### LiDAR Video Fusion
