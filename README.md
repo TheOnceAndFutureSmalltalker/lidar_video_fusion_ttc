@@ -19,7 +19,7 @@ To acquire, compile, and run the project in Ubuntu, follow the statements below.
 ```bash
 $> git clone https://github.com/TheOnceAndFutureSmalltalker/lidar_video_fusion_ttc.git
 $> cd lidar_video_fusion_ttc
-$> wget https://pjreddie.com/media/files/yolov3.weights /data/yolo
+$> wget https://pjreddie.com/media/files/yolov3.weights -P dat/yolo
 $> mkdir build && cd build
 $> cmake ..
 $> make
@@ -36,3 +36,14 @@ Below is the basic operational flowchart of this project.
 
 This project demonstrates several important techniques in computer vision and sensor fusion.
 
+image keypoints
+
+matching
+
+neural networks
+
+pinhole camera
+
+time to collision calculation
+
+lidar video fusion
