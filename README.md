@@ -1,6 +1,6 @@
 # Time to Collision Estimation Using Video and LiDAR
 
-Fusion of Video images and LiDar readings to determine the time to collision of a vehicle in front of our vehicle.
+Fusion of Video images and LiDAR readings to determine the time to collision of a vehicle in front of our vehicle.
 
 <p align="center">
 <img src="https://github.com/TheOnceAndFutureSmalltalker/lidar_video_fusion_ttc/blob/master/images/draggedimage-1.png"  /><br /><b>Detected Image Keypoints</b></p>
@@ -22,10 +22,10 @@ $> cd lidar_video_fusion_ttc
 $> mkdir build && cd build
 $> cmake ..
 $> make
-$> ./environment 
+$> ./3D_object_tracking 
 ```
 
-## Discusion
+## Discussion
 
 Below is the basic operational flowchart of this project.
 
